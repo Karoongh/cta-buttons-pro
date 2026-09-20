@@ -6,6 +6,8 @@
 
 ## نسخه فعلی: 1.8.0
 
+> **بکاپ رسمی این نسخه:** برنچ [`v1.8.0`](https://github.com/Karoongh/cta-buttons-pro/tree/v1.8.0)
+
 ## امکانات
 
 - دکمه شناور حرفه‌ای با افکت شیشه‌ای (Glassmorphism)
