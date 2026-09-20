@@ -1,0 +1,153 @@
+/* assets/css/style.css - CTA Buttons Pro v1.8.0 */
+:root {
+    --cta-glass-r: 255;
+    --cta-glass-g: 255;
+    --cta-glass-b: 255;
+    --cta-glass-opacity: 0.2;
+    --cta-glass-hover-opacity: 0.38;
+}
+
+.cta-pro-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 25px 0;
+    justify-content: center;
+    font-family: inherit;
+}
+
+.cta-pro-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 26px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 160px;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    position: relative;
+    overflow: hidden;
+    background: rgba(var(--cta-glass-r), var(--cta-glass-g), var(--cta-glass-b), var(--cta-glass-opacity));
+    border: 1px solid rgba(var(--cta-glass-r), var(--cta-glass-g), var(--cta-glass-b), 0.25);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.cta-pro-btn:hover {
+    background: rgba(var(--cta-glass-r), var(--cta-glass-g), var(--cta-glass-b), var(--cta-glass-hover-opacity));
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+}
+
+.cta-floating {
+    position: fixed;
+    bottom: 20px;
+    z-index: 9999;
+    font-family: inherit;
+}
+
+.cta-floating.left { left: 20px; }
+.cta-floating.right { right: 20px; }
+
+.cta-floating-menu {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.cta-floating-menu.active {
+    display: flex !important;
+    animation: ctaFadeIn 0.45s ease forwards;
+}
+
+.cta-floating-item,
+.cta-floating-toggle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(var(--cta-glass-r), var(--cta-glass-g), var(--cta-glass-b), var(--cta-glass-opacity));
+    border: 1px solid rgba(var(--cta-glass-r), var(--cta-glass-g), var(--cta-glass-b), 0.25);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cta-floating-item:hover,
+.cta-floating-toggle:hover {
+    background: rgba(var(--cta-glass-r), var(--cta-glass-g), var(--cta-glass-b), var(--cta-glass-hover-opacity));
+    transform: translateY(-7px) scale(1.15);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.5);
+}
+
+@keyframes ctaFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.cta-fixed-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    z-index: 9998;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 10px 16px;
+    gap: 14px;
+    justify-content: center;
+    transform: translateY(100%);
+    animation: ctaSlideUp 0.6s 0.8s forwards;
+}
+
+.cta-fixed-btn {
+    flex: 1;
+    max-width: 220px;
+    background: #fff;
+    color: #000 !important;
+    padding: 14px 18px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+
+.cta-fixed-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+@keyframes ctaSlideUp {
+    to { transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+    .cta-floating { bottom: 78px; }
+    .cta-floating.left { left: 15px; }
+    .cta-floating.right { right: 15px; }
+    .cta-floating-item, .cta-floating-toggle { width: 52px; height: 52px; }
+}
+
+@media (min-width: 769px) {
+    .cta-fixed-bar { display: none !important; }
+}
