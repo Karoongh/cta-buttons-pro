@@ -2,10 +2,7 @@
 Thumbs.db
 *.log
 *.swp
-*.swo
 *~
 .idea/
 .vscode/
-*.sublime-*
 node_modules/
-package-lock.json
