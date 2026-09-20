@@ -43,6 +43,7 @@ add_action('init', function () {
 
 add_action('plugins_loaded', 'cta_pro_init');
 function cta_pro_init() {
+    require_once CTA_PRO_PATH . 'includes/export-details.php';
     require_once CTA_PRO_PATH . 'includes/helpers.php';
     require_once CTA_PRO_PATH . 'includes/shortcode.php';
     require_once CTA_PRO_PATH . 'includes/assets.php';

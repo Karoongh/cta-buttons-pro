@@ -1,20 +1,11 @@
-# WordPress
 .DS_Store
 Thumbs.db
 *.log
 *.swp
 *.swo
 *~
-
-# IDE
 .idea/
 .vscode/
 *.sublime-*
-
-# Node (if any)
 node_modules/
 package-lock.json
-
-# OS
-.DS_Store
-._*
