@@ -1,15 +1,17 @@
 <?php
-// includes/floating.php
+/**
+ * includes/floating.php
+ */
 if (!defined('ABSPATH')) exit;
 
 function cta_pro_floating_buttons() {
-    if (is_admin() || get_option('cta_pro_floating') !== '1') return;
+    if (is_admin()) return;
 
-    $active = false;
-    foreach (['phone','whatsapp','telegram','email','instagram','location'] as $ch) {
-        if (get_option("cta_pro_$ch")) { $active = true; break; }
-    }
-    if (!$active) return;
+    $settings = cta_pro_get_settings();
+    if (($settings['floating'] ?? '1') !== '1') return;
+
+    $buttons = cta_pro_get_buttons();
+    if (empty($buttons)) return;
 
     include CTA_PRO_PATH . 'templates/floating-buttons.php';
 }

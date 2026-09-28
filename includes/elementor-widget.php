@@ -1,5 +1,7 @@
 <?php
-// includes/elementor-widget.php
+/**
+ * includes/elementor-widget.php
+ */
 if (!defined('ABSPATH')) exit;
 
 function cta_pro_register_elementor_widget() {
