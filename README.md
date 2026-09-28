@@ -1,50 +1,21 @@
-# CTA Buttons Pro v1.8.0
+# CTA Buttons Pro v2.1.4
 
-**دکمه‌های تماس شناور و ثابت حرفه‌ای برای وردپرس**
+Fully dynamic CTA buttons + **Zero Data Loss** + **stable shortcode API**.
 
-افزونه حرفه‌ای دکمه‌های تماس با طراحی Glassmorphism، آمار کلیک دقیق، شورت‌کد اختصاصی، خروجی CSV و پشتیبانی کامل از المنتور.
+## Shortcode contract
 
-## نسخه فعلی: 1.8.0
+See **[SHORTCODE-API.md](SHORTCODE-API.md)** — frozen shortcodes that must never break across updates.
 
-> **بکاپ رسمی این نسخه:** برنچ [`v1.8.0`](https://github.com/Karoongh/cta-buttons-pro/tree/v1.8.0)
+Examples:
+- `[cta_buttons_pro]` — all buttons
+- `[cta_phone]` / `[cta_phone index="2"]` — first / second phone
+- `[cta_btn id="btn_xxxx"]` — exact button
 
-## امکانات
+## Data protection
 
-- دکمه شناور حرفه‌ای با افکت شیشه‌ای (Glassmorphism)
-- نوار تماس ثابت پایین صفحه (مخصوص موبایل)
-- شورت‌کدهای اختصاصی برای هر کانال
-- نمایش همه دکمه‌ها با `[cta_buttons_pro]`
-- آپلود آیکون سفارشی برای هر کانال
-- آمار کلیک دقیق + جزئیات پیشرفته (IP، صفحه منبع، عنوان)
-- خروجی CSV از جزئیات کلیک‌ها
-- پشتیبانی کامل از المنتور
-- طراحی ۱۰۰٪ واکنش‌گرا و RTL
+- Updates never wipe buttons or stats
+- `uninstall.php` does not delete data
+- Migration only adds missing data
 
-## کانال‌ها
-
-تلفن • واتساپ • تلگرام • ایمیل • اینستاگرام • لوکیشن
-
-## نصب
-
-1. پوشه افزونه را در `wp-content/plugins/` قرار دهید.
-2. افزونه را فعال کنید.
-3. از منوی **CTA Buttons Pro** اطلاعات تماس را وارد کنید.
-
-## شورت‌کدها
-
-- `[cta_buttons_pro]` — همه دکمه‌ها
-- `[cta_phone]` / `[cta_whatsapp]` / `[cta_telegram]` / ...
-- `[cta_button channel="whatsapp" label="چت با ما"]`
-
-## نیازمندی‌ها
-
-- وردپرس ۵.۶+
-- PHP ۷.۴+
-
-## لایسنس
-
-GPL v2 or later
-
-## نویسنده
-
-[Ghobadi Karoon](https://ghobadi.ir)
+## Author
+Ghobadi Karoon – https://ghobadi.ir
